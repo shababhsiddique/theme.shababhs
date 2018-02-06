@@ -1,0 +1,90 @@
+
+/**
+Signature Animation
+*/
+
+
+.img-sign{
+    width: 70%;
+}
+
+@media all and (max-width: 1024px) and (min-width: 700px) {
+    .img-sign {
+        width: 40%;
+    }
+}
+@media all and (max-width: 699px) and (min-width: 300px) {
+    .img-sign {
+        width: 40%;
+    }
+}
+
+path.sign-stroke{
+
+    fill:#ffeeaa;
+    fill-opacity:1;
+    stroke: #FFCF79;
+    stroke-width: 2;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none;
+
+    transition: 
+        transform 0.5s ease-in,
+        fill 0.5s ease-in, 
+        stroke 0.5s ease-in, 
+        fill-opacity 0.5s ease-in, 
+        stroke-opacity 0.5s ease-in,
+        stroke-width 1s 1s;
+    
+    /*transition: all 0.5s ease-in;*/
+}
+
+
+
+@keyframes strokeanim {
+    0%   {fill:#ff6600;}
+    50%  {fill:#FFA54F;}
+    100% {fill:#ff6600;}
+}
+
+path.sign-stroke-s{
+    animation: strokeanim linear 10s infinite;
+}
+
+path.sign-stroke-h{
+    animation: strokeanim linear 10s infinite;
+}
+
+svg.img-sign:hover path.sign-stroke{
+    fill:#FFCF79;
+}
+
+#colored-sign{
+
+    /*    opacity: 0.5; 
+    transition: all 1s ease-in;
+    */
+}
+
+
+
+#colored-sign path{
+    fill-opacity: 0;
+    stroke-opacity: 1;    
+}
+
+
+
+.opa1 path{
+    stroke-opacity: 0 !important;
+    fill-opacity: 1 !important;
+
+    stroke-width: 70;
+    
+}
+
+/**
+Signature End
+*/
