@@ -1,6 +1,6 @@
 @font-face {
     font-family: "CourierNew";
-    src: url("../courbd.ttf");
+    src: url("../fonts/courbd.ttf");
 }
 
 .index-page .page-header {
@@ -9,22 +9,11 @@
     min-height: 400px;
 }
 
-/*@media (max-height: 400px){   
-
-    .index-page .page-header {
-        
-        overflow: hidden;
-    }
-}*/
-
 @media screen and (orientation:portrait) {
     .index-page .page-header {
         min-height: 650px;
     }
 }
-
-
-
 
 
 .code-block {
@@ -89,7 +78,7 @@ pre span:before {
 
 
 h3.code-subtitle{
-    font-family: Ubuntu;
+    font-family: Roboto;
     color: #fffbee;
     font-size: 1.7rem !important;
 }
@@ -235,52 +224,52 @@ h3.code-subtitle{
 
 /*burger*/
 .navbar-toggler {
-  padding: 0px !important;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: transform 330ms ease-out;
+    padding: 0px !important;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 330ms ease-out;
 }
 
 .navbar-toggler.open {
-  transform: rotate(-45deg);  
+    transform: rotate(-45deg);  
 }
 
 .line-menu {
-  background-color: #fff;
-  border-radius: 0px;
-  width: 100%;
-  height: 3px;
+    background-color: #fff;
+    border-radius: 0px;
+    width: 100%;
+    height: 3px;
 }
 
 .line-menu.half {
-  width: 50%;
+    width: 50%;
 }
 
 .navbar-toggler:hover line-menu{
-  background-color: red;  
+    background-color: red;  
 }
 
 .line-menu.start {
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: right;
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: right;
 }
 
 .open .line-menu.start {
-  transform: rotate(-90deg) translateX(3px);
+    transform: rotate(-90deg) translateX(3px);
 }
 
 .line-menu.end {
-  align-self: flex-end;
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: left;
+    align-self: flex-end;
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: left;
 }
 
 .open .line-menu.end {
-  transform: rotate(-90deg) translateX(-3px);
+    transform: rotate(-90deg) translateX(-3px);
 }
 
 /*burger*/
@@ -292,3 +281,102 @@ h3.code-subtitle{
 .nav-link .material-icons{
     font-size: 1.6rem !important;
 }
+
+.gem{
+    transform: rotate(5deg) !important;
+    font-size: 2.5rem !important;
+    display:inline-block;
+    vertical-align:middle;
+    -webkit-transform:perspective(1px) translateZ(0);
+    transform:perspective(1px) translateZ(0);
+    box-shadow:0 0 1px transparent;
+    -webkit-transition-duration:.3s;
+    transition-duration:.3s;
+    -webkit-transition-property:transform;
+    transition-property:transform
+}
+
+.gem:hover{
+
+    transform: scale(1.3) rotate(0deg) !important;
+
+    -webkit-transform: scale(1.3) rotate(0deg) !important;
+}
+
+
+/*Experiment Box3d*/
+.p3d {
+    /*text-align: center;*/
+}
+
+.p3d a {
+    font-weight: 400;
+    color: #00bcd4;
+    display: inline-block;
+    text-decoration: none;
+    overflow: visible;
+    vertical-align: top;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -ms-perspective: 600px;
+    perspective: 600px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+}
+.p3d a:hover span {
+    background: #00bcd4;
+    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+    -moz-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+    -ms-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+    transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+}
+
+.p3d a:hover span:after {
+    opacity: 1;
+}
+
+
+.p3d a span {    
+    display: block;
+    position: relative;
+    padding: 0 10px;
+    
+    
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    
+    
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.p3d a span:after {
+    opacity: 0;
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+    color: #222;
+    background: #00bcd4;
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    -moz-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    -ms-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+}
+/**End P3d*/
+
