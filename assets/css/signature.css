@@ -37,7 +37,7 @@ path.sign-stroke{
         fill-opacity 0.5s ease-in, 
         stroke-opacity 0.5s ease-in,
         stroke-width 1s 1s;
-    
+
     /*transition: all 0.5s ease-in;*/
 }
 
@@ -82,9 +82,27 @@ svg.img-sign:hover path.sign-stroke{
     fill-opacity: 1 !important;
 
     stroke-width: 70;
-    
+
 }
 
+.hvrtransitionfix path.hvr-rotate,
+.hvrtransitionfix path.hvr-float,
+.hvrtransitionfix path.hvr-sink,
+.hvrtransitionfix path.hvr-forward{
+    transition: transform 0.5s ease-out 1.5s !important;
+}
+
+.hvrtransitionfix path.hvr-rotate:hover,
+.hvrtransitionfix path.hvr-float:hover,
+.hvrtransitionfix path.hvr-sink:hover,
+.hvrtransitionfix path.hvr-forward:hover{
+    transition: transform 0.5s ease-out 0s !important;
+}
+/*
+path.hvr-sink:hover{
+    -webkit-transform:translateY(12px) !important;
+    transform:translateY(12px) !important;
+}*/
 /**
 Signature End
 */
