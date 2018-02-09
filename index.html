@@ -50,7 +50,7 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)" onclick="home()">
+                            <a class="nav-link" href="http://localhost/theme.shababhs/">
                                 <i class="material-icons">&#xE3C6;</i> Home
                             </a>
                         </li>
@@ -103,11 +103,11 @@
 
 
         <div class="main">
-            <div class="container">                
+            <div class="container" id="domContainer">                
                 <!--home page-->
                 <div class="row page-index">
                     <div class="col-md-8 mr-auto ml-auto ">
-                        <div class="signatureholder">
+                        <div class="signatureholder" style="display: none">
                             <svg class="img-sign"
                                  version="1.1"
                                  viewBox="-10 -10 680 430"
@@ -228,13 +228,23 @@
                             </g>
                             </svg> 
                             <script type="text/javascript">
+
+                                urlString = window.location.href;
+                                var urlarray = urlString.split('/');
+
+                                var fn = urlarray[urlarray.length - 1];
+
+                                if (fn === "") {
+                                    $(".signatureholder").show();
+                                }
+
                                 var $svg = $('svg').drawsvg({
                                     duration: 1500,
                                     callback: function () {
 
                                         $("#svg3722").load("assets/svg/sign-fill.svg", function () {
                                             console.log("SVG fetched?");
-                                            
+
 
                                             $("#colored-sign").delay(200)
                                                     .queue(function (next) {
@@ -277,107 +287,11 @@
                 </div>
 
                 <!--about page-->
-                <div class="row page-about hidden" >                    
-                    <div class="col-lg-5 ml-auto">                              
-                        <h1><strong>Hi!</strong></h1>
+
+                <!--skills page--> 
 
 
-                        <h2 class="p3d">I am <a href="#" ><span data-title="Shabab H Siddique">Shabab H Siddique</span></a></h2>    
-
-
-                        <!--<h2 >I am <a href="#"><strong class="text-info">Shabab H Siddique</strong></a></h2>-->    
-
-                        <p class="text-big">A passionate web applications developer from Bangladesh.</p>                        
-
-                        <p class="text-big">I love bringing systems to life with my <i class="fa fa-code text-info hvr-grow hvr-shiny"></i> code.</p>
-
-                    </div>
-                    <div class="col-lg-5 mr-auto text-center moto">        
-
-                        <h3><strong>&lt;The Code&gt;</strong></h3>
-                        <!--<h2 class="text-success "><strong>&lt;</strong>pr<i class="fa fa-circle-o-notch hvr-rotateinf"></i>cess<strong>&gt;</strong></h2>-->
-                        <div style="" class="text-big">Thinking with&nbsp;<i class="material-icons text-rose hvr-pulse-grow">&#xE87E;</i>&nbsp;heart</div>
-                        <div class="text-big"><span class="fa fa-plus"></span></div>
-                        <div class="text-big">Building&nbsp;<span class="animatedcogs">
-                                <i class="material-icons cogbg">&#xE8B8;</i><i class="material-icons cogsm">&#xE8B8;</i>
-                            </span>with passion</div>
-                        <!--                        <div class="text-big"><span class="fa fa-plus"></span></div>
-                                                <div class="text-big">Delivering with <i class="gem devicons devicons-ruby_rough text-warning hvr-shiny"></i> polish</div>                        -->
-                        <div class="text-big"><span class="fa fa-plus"></span></div>
-                        <div class="text-big">Delivering with&nbsp;&nbsp;<i class="gem fa fa-diamond text-warning hvr-shiny"></i>&nbsp;&nbsp;polish</div>                        
-
-                    </div>
-                </div>
-
-                <!--skills page-->
-                <div class="row page-skills preloaded-hidden hidden" >
-                    <div class="col-lg-12">
-                        <div id="wordCloud"></div>                       
-                    </div>
-                    <div class="col-lg-12">                              
-                        <h2 class="p3d text-center">
-                            The 
-                            <a href="#" ><span data-title="Skills">Skills</span></a> 
-                            in my 
-                            <i class="fa fa-briefcase text-rose hvr-grow"></i> toolbox                            
-                        </h2>    
-                    </div>
-                    <div class="modal fade" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="skillModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="skillModalLabel">Skill Title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body" id="skillModalText">
-                                    This is some text regarding my skill. This text maybe about 1 or 2 lines. But it can be big too. Lets See.
-                                </div>
-                                <br/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--contact page-->
-                <div class="row page-contact preloaded-hidden hidden" >
-
-                    <div class="col-md-6">
-                        <h2 class="p3d">If you wish to <a href="#" ><span data-title="Contact">Contact</span></a> me.</h2>
-                        <h3> You can find me on <a href="" class="btn btn-info">linked <i class="fa fa-linkedin-square"></i></a> or <a href="#" class="btn btn-info">twitter <i class="fa fa-twitter-square"></i></a></h3>                            
-                        <h2> -- Or -- </h2>
-                        <h3>Hire me <a href="" class="btn btn-success">upWork <i class="fa fa-handshake-o"></i></a></h3>
-
-                    </div>
-                    <div class="col-md-6">
-                        <form class="form">
-                            <div class="form-group">
-                                <label for="exampleInput1" class="bmd-label-floating">Name</label>
-                                <input type="text" class="form-control" id="exampleInput1">                                
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInput1" class="bmd-label-floating">Email</label>
-                                <input type="email" class="form-control" id="exampleInput1" >
-                                <span class="bmd-help">I wont share your Email with anyone</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInput1" class="bmd-label-floating">Subject</label>
-                                <input type="text" class="form-control" id="exampleInput1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInput1" class="bmd-label-floating">Message</label>
-                                <textarea rows="5" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Get In Touch</button>
-                            </div>
-                        </form>
-
-                    </div>
-
-                </div>
-
+                <!--contact page--> 
 
             </div>            
         </div>

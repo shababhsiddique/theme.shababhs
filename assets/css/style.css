@@ -446,11 +446,9 @@ form input, form textarea{
 }
 
 
-/*.page-about{
-    opacity: 0;
-    transition: display 1s 1s
-        opacity 1s ease-in;
-}*/
+#domContainer{
+    /*transition: opacity 1s ease-in;*/
+}
 
 .hidden{
     display: none;
