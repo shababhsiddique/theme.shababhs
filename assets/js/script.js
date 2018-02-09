@@ -1,35 +1,4 @@
-var $svg = $('svg').drawsvg({
-
-    callback: function () {
-
-        $("#svg3722").load("assets/sign-fill.svg", function () {
-            console.log("SVG fetched?");
-
-            $("#colored-sign").delay(200)
-                    .queue(function (next) {
-                        $(this).addClass("opa1");
-                        $(this).removeClass("opa1");
-                        next();
-
-                        $(this).addClass("opa1");
-                        $(this).addClass("hoverstrokefix");
-                        
-                        $("path.hvr-rotate").mouseover(function(){
-                            $("path.hvr-rotate").parent().addClass("hvrtransitionfix");
-                        });
-                        
-                    });
-        });
-
-    }
-});
-
-function animate() {
-    $svg.drawsvg('animate');
-}
-
-animate();
-
+//svg code here
 
 var wrapperMenu = document.querySelector('.navbar-toggler');
 
@@ -48,6 +17,8 @@ function home() {
 
     $(".page-index").removeClass('hidden');
 //    $(".page-header").removeClass('.hidden');
+    window.history.pushState('page2', 'Title', 'http://localhost/theme.shababhs');
+
 }
 
 
@@ -68,10 +39,12 @@ function about() {
     $(".page-about").removeClass('hidden');
     
     $(".page-about").css("opacity",1);
+    
+    window.history.pushState('page2', 'Title', 'http://localhost/theme.shababhs/about');
 }
 
 
-function skill() {
+function skills() {
 
 //    $(".page-header").addClass('hidden');
     $(".page-index").addClass('hidden');
@@ -82,6 +55,8 @@ function skill() {
 
     $(".page-skills").removeClass('hidden');
     makeSkillCloud();
+    
+    window.history.pushState('page2', 'Title', 'http://localhost/theme.shababhs/skills');
 }
 
 
@@ -94,12 +69,22 @@ function contact() {
     $(".page-skills").addClass('hidden');
 
     $(".page-contact").removeClass('hidden');
+    
+    window.history.pushState('page2', 'Title', 'http://localhost/theme.shababhs/contact');
 
 }
 
 $(window).on('load', function () {
     console.log("window load occured!");
-
+    
+    urlString = window.location.href;
+    var urlarray = urlString.split('/');
+    
+    var fn = urlarray[urlarray.length-1];
+    
+    if(fn)
+    window[fn]();
+    
     $('.preloaded-hidden').css("opacity", 1);
     console.log("test");
 });

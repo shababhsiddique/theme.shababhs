@@ -89,7 +89,7 @@ svg.img-sign:hover path.sign-stroke{
 .hvrtransitionfix path.hvr-float,
 .hvrtransitionfix path.hvr-sink,
 .hvrtransitionfix path.hvr-forward{
-    transition: transform 0.5s ease-out 1.5s !important;
+    transition: transform 0.5s ease-out 1s !important;
 }
 
 .hvrtransitionfix path.hvr-rotate:hover,

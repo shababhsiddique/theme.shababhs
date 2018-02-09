@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="assets/fonts/fa/css/font-awesome.css" />
 
         <link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css" />
-        
+
         <!-- Material Kit-->
         <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.0">
 
@@ -30,6 +30,9 @@
 
         <!--front row scripts-->
         <script type="text/javascript" src="assets/js/core/jquery.min.js"></script>
+
+        <!--   Signature   -->
+        <script type="text/javascript" src="assets/js/plugins/jquery.drawsvg.js"></script>
     </head>
 
     <body class="body">
@@ -59,12 +62,12 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)" onclick="skill()">
+                            <a class="nav-link" href="javascript:void(0)" onclick="skills()">
                                 <i class="material-icons">&#xE53B;</i> Skills
                             </a>
                         </li>
-                        
-                        
+
+
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)" onclick="contact()">
                                 <i class="material-icons">&#xE0CB;</i> Contact
@@ -97,8 +100,8 @@
                 </div>
             </div>
         </nav>
-                
-        
+
+
         <div class="main">
             <div class="container">                
                 <!--home page-->
@@ -224,22 +227,55 @@
 
                             </g>
                             </svg> 
-                            
+                            <script type="text/javascript">
+                                var $svg = $('svg').drawsvg({
+                                    duration: 1500,
+                                    callback: function () {
+
+                                        $("#svg3722").load("assets/svg/sign-fill.svg", function () {
+                                            console.log("SVG fetched?");
+                                            
+
+                                            $("#colored-sign").delay(200)
+                                                    .queue(function (next) {
+                                                        $(this).addClass("opa1");
+                                                        $(this).removeClass("opa1");
+                                                        next();
+
+                                                        $(this).addClass("opa1");
+                                                        $(this).addClass("hoverstrokefix");
+
+                                                        $("path.hvr-rotate").mouseover(function () {
+                                                            $("path.hvr-rotate").parent().addClass("hvrtransitionfix");
+                                                        });
+
+                                                    });
+                                        });
+
+                                    }
+                                });
+
+                                function animate() {
+                                    $svg.drawsvg('animate');
+                                }
+                                animate();
+                            </script>
+
                             <h3 class="code-subtitle preloaded-hidden">{
-                                <span class="sub-dev"><i class="fa fa-code"></i></span> , 
-                                <span class="sub-des"><i class="fa fa-paint-brush"></i></span> , 
+                                <span class="sub-dev"><i class="fa fa-code"></i> , </span>  
+                                <span class="sub-des"><i class="fa fa-paint-brush"></i> , </span>
                                 <span class="sub-nerd"><i class="fa fa-ra"></i></span>
                                 }</h3>
-                            
-<!--                            <h3 class="p3d code-subtitle"> { 
-                                <a class="p3d-dev" href="#" ><span data-title="Developer"><i class="fa fa-code"></i></span></a>&nbsp;,
-                                &nbsp;<a class="p3d-des" href="#" ><span data-title="Designer">Designer</span></a>&nbsp;,
-                                &nbsp;<a class="p3d-ner" href="#" ><span data-title="Nerd">Nerd</span></a> }
-                            </h3>    -->
+
+                            <!--                            <h3 class="p3d code-subtitle"> { 
+                                                            <a class="p3d-dev" href="#" ><span data-title="Developer"><i class="fa fa-code"></i></span></a>&nbsp;,
+                                                            &nbsp;<a class="p3d-des" href="#" ><span data-title="Designer">Designer</span></a>&nbsp;,
+                                                            &nbsp;<a class="p3d-ner" href="#" ><span data-title="Nerd">Nerd</span></a> }
+                                                        </h3>    -->
                         </div>
                     </div>
                 </div>
-                
+
                 <!--about page-->
                 <div class="row page-about hidden" >                    
                     <div class="col-lg-5 ml-auto">                              
@@ -272,7 +308,7 @@
 
                     </div>
                 </div>
-                
+
                 <!--skills page-->
                 <div class="row page-skills preloaded-hidden hidden" >
                     <div class="col-lg-12">
@@ -303,7 +339,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!--contact page-->
                 <div class="row page-contact preloaded-hidden hidden" >
 
@@ -341,8 +377,8 @@
                     </div>
 
                 </div>
-                
-                
+
+
             </div>            
         </div>
 
@@ -354,8 +390,6 @@
         <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
         <script type="text/javascript" src="assets/js/material-kit.js"></script>
 
-        <!--   Signature   -->
-        <script type="text/javascript" src="assets/js/plugins/jquery.drawsvg.js"></script>
 
         <!--   JQCloud   -->
         <script type="text/javascript" src="assets/js/plugins/jQWCloudv3.1.js"></script>
