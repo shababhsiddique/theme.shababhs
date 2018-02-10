@@ -6,6 +6,8 @@
 body{
     height: 100vh;
     background: linear-gradient(-90deg,rgba(35,43,43,1), rgba(14,17,17,1) );
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .main{
@@ -369,13 +371,14 @@ form input, form textarea{
 .sub-des .fa-paint-brush:before,
 .sub-nerd .fa-ra:before{
     transition: all 1s ease-in;    
-    transition-delay: 5s;
+    transition-delay: 5s;    
 }
 
 
 
 .sub-dev:hover .fa-code:before{
-    content: "developer";
+    content: "developer";    
+    font-family: Ubuntu;
     color: #00bcd4;
     transition-delay: 0s;
 }
@@ -383,6 +386,7 @@ form input, form textarea{
 
 .sub-des:hover .fa-paint-brush:before{
     content: "designer";
+    font-family: Ubuntu;
     color: #e91e63 ;
     transition-delay: 0s;
 }
@@ -391,6 +395,7 @@ form input, form textarea{
 
 .sub-nerd:hover .fa-ra:before{
     content: "n3rd";
+    font-family: Ubuntu;
     color: #ff9800;
     transition-delay: 0s;
 }
