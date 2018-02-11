@@ -39,23 +39,23 @@ path.sign-stroke{
 
 
 
-@keyframes strokeanim {
+@keyframes strokeanimlight {
     0%   {fill:#0e1111;}
-    50%  {fill:#353839;}
+    50%  {fill:#414a4c;}
     100% {fill:#0e1111;}
 }
 
 path.sign-stroke-s{
-    animation: strokeanim linear 10s infinite;
+    animation: strokeanimlight linear 10s infinite;
 }
 
 path.sign-stroke-h{
-    animation: strokeanim linear 10s infinite;
+    animation: strokeanimlight linear 10s infinite;
 }
 
 
 svg.img-sign:hover path.sign-stroke{
-    fill:#888;
+    fill:#414a4c;
 }
 
 
