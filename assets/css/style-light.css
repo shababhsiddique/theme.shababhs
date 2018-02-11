@@ -63,17 +63,22 @@ h3.code-subtitle{
     color:  #FFFFFF;
 }
 
+/*h3.code-subtitle {
+    
+}*/
 
 
 .sub-dev:hover .fa-code:before{
     content: "developer";    
     color: #0e1111;
+    text-shadow: 1px 1px 5px #272634;
 }
 
 
 .sub-des:hover .fa-paint-brush:before{
     content: "designer";
     color: #0e1111 ;;
+    text-shadow: 1px 1px 5px #272634;
 }
 
 
@@ -81,6 +86,7 @@ h3.code-subtitle{
 .sub-nerd:hover .fa-ra:before{
     content: "n3rd";
     color: #0e1111;
+    text-shadow: 1px 1px 5px #272634;
 }
 
 
