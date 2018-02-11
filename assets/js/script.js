@@ -1,8 +1,4 @@
-var wrapperMenu = document.querySelector('.navbar-toggler');
 
-wrapperMenu.addEventListener('click', function () {
-    wrapperMenu.classList.toggle('open');
-});
 
 //function home() {
 //
@@ -50,12 +46,31 @@ function contact() {
 
 $(window).on('load', function () {
 
+    var wrapperMenu = document.querySelector('.navbar-toggler');
+
+    wrapperMenu.addEventListener('click', function () {
+        console.log("SOmeone clicked me");
+        wrapperMenu.classList.toggle('open');
+        setTimeout(
+                function () {
+                    console.log("bodyclick event added");
+                    $("#bodyClick").click(function () {
+                        console.log("yo clicked me");
+                        wrapperMenu.classList.toggle('open');
+                    });
+                },
+                500);
+
+    });
+
+
+
     console.log("window load occured!");
 
-    if (fn){
+    if (fn) {
         window[fn]();
     }
-        
+
 
     $('.preloaded-hidden').css("opacity", 1);
     console.log("test");

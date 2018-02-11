@@ -6,9 +6,11 @@
 body{
     height: 100vh;
     background: linear-gradient(-90deg,rgba(35,43,43,1), rgba(14,17,17,1) );
-    
+/*    background-image: url("../img/black_paper.png");    
+    background-repeat: repeat;*/
+
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .main{
@@ -209,7 +211,7 @@ form input, form textarea{
 }
 
 .open .line-menu.start {
-    transform: rotate(-90deg) translateX(3px);
+    transform: rotate(-90deg) translateX(2px);
 }
 
 .line-menu.end {
@@ -219,7 +221,7 @@ form input, form textarea{
 }
 
 .open .line-menu.end {
-    transform: rotate(-90deg) translateX(-3px);
+    transform: rotate(-90deg) translateX(-2px);
 }
 
 /*burger*/
@@ -412,7 +414,7 @@ form input, form textarea{
 
 @media (max-width: 850px){   
     #wordCloud{
-        height: 85vh;
+        height: 70vh;
     }
 }
 
@@ -468,5 +470,39 @@ form input, form textarea{
 }*/
 
 
+.navbar.navbar-transparent{
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+}
 
+@media (max-width: 991px){
+    .navbar-collapse {
+        background-color: transparent;
+        width: 60px;
+    }
+}
 
+@media (max-width: 991px){
+    .navbar-collapse::after{
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 991px)
+{
+    .navbar-collapse .navbar-nav .nav-item .nav-link {
+        color: #3C4858;
+        margin: 5px 5px;
+    }
+}
+
+@media (max-width: 991px)
+{
+    .nav-open .navbar-translate{
+        transform: translate3d(-65px, 0, 0);
+    }
+}
+
+.navbar .navbar-nav .nav-item .nav-link:not(.btn-just-icon) .fa{
+    margin-left: 3px;
+}

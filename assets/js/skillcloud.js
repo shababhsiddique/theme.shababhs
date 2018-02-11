@@ -34,14 +34,20 @@ function makeSkillCloud() {
 
     ];
 
+    var tnt = $("body").data('tint');
+    console.log(tnt);
     var indx = 0;
     for (var wordItem in wordlist) {
 
         opacity = wordlist[indx].weight / 100 + 0.4;
 
         //change color here
-//        wordlist[indx].color = "rgba(51, 181, 229, " + opacity + ")"; //For blue
-        wordlist[indx].color = "rgba(0, 0, 0, " + opacity + ")"; //For Black
+        if(tnt === 'light'){
+            wordlist[indx].color = "rgba(0, 0, 0, " + opacity + ")"; //For Black
+        }else{
+            wordlist[indx].color = "rgba(51, 181, 229, " + opacity + ")"; //For blue
+        }
+        
         indx++;
         console.log(wordlist[indx]);
     }

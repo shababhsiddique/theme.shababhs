@@ -1,8 +1,20 @@
+html{
+/*    background-image: url("../img/white_brushed.png");
+    background-repeat: repeat;*/
+    
+}
+
 body{
-    /*background: linear-gradient(-90deg,#EEE, #BBB);*/    
-    background: #D0D0D0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(-90deg, #FFFFFF, #D0D0D0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(-90deg, #D0D0D0, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background: #C7C7C7;  
+    background: -webkit-linear-gradient(-55deg, #F7F7F7, #C7C7C7);   
+    background: linear-gradient(-55deg, #C7C7C7, #F7F7F7);  
+    
+
+/*    background: transparent;
+    background: -webkit-linear-gradient(-90deg, rgba(255,255,255,1),  rgba(100,100,100,1)); 
+    background: linear-gradient(-90deg,  rgba(100,100,100,0.2), rgba(255,255,255,0.5));  */
+    
 
 }
 
@@ -48,7 +60,7 @@ svg.img-sign:hover path.sign-stroke{
 
 
 h3.code-subtitle{
-    color:  #AAA;
+    color:  #FFFFFF;
 }
 
 
@@ -145,4 +157,8 @@ form input, form textarea{
 }
 .page-contact a:hover i {
     color: #89229b;
+}
+
+.line-menu{
+    background-color: black;
 }
