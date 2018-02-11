@@ -19,6 +19,16 @@ Signature Animation
     }
 }
 
+path.sign-preload-stroke{
+    fill:none;
+    stroke:#FFCF79;
+    stroke-width:2;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none;
+}
+
 path.sign-stroke{
 
     fill:#ffeeaa;

@@ -7,7 +7,7 @@ function makeSkillCloud() {
     wordlist = [
 
         /*Primary Skills*/
-        {word: 'C++', weight: 10, color: 'rgba(51, 181, 229, 0.5)'},
+        {word: 'C++', weight: 10, color: 'rgba(0, 0, 0, 0.5)'},
         {word: 'Java', weight: 15, color: '#33b5e5'},
         {word: 'VB.net', weight: 10, color: '#33b5e5'},
         {word: 'HTML5', weight: 30, color: '#33b5e5'},
@@ -37,9 +37,11 @@ function makeSkillCloud() {
     var indx = 0;
     for (var wordItem in wordlist) {
 
-        opacity = wordlist[indx].weight / 100 + 0.5;
+        opacity = wordlist[indx].weight / 100 + 0.4;
 
-        wordlist[indx].color = "rgba(51, 181, 229, " + opacity + ")";
+        //change color here
+//        wordlist[indx].color = "rgba(51, 181, 229, " + opacity + ")"; //For blue
+        wordlist[indx].color = "rgba(0, 0, 0, " + opacity + ")"; //For Black
         indx++;
         console.log(wordlist[indx]);
     }
