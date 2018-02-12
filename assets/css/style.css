@@ -19,6 +19,14 @@ body{
     padding-top: 50px;
 }
 
+
+@media (max-width: 991px)
+{
+    .main{
+        padding-top: 20px;        
+    }
+    
+}
 .signatureholder{
     text-align: center;
 }
@@ -154,7 +162,7 @@ form input, form textarea{
 
     box-shadow: 0 0 1px transparent;
     -webkit-transition: -webkit-transform 1s ease-in-out;
-    transition:         transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 .page-about .hvr-rotateinf:hover {
     -webkit-transform: rotate(360deg);

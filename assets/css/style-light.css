@@ -1,20 +1,24 @@
 html{
-/*    background-image: url("../img/white_brushed.png");
-    background-repeat: repeat;*/
-    
+    /*    background-image: url("../img/white_brushed.png");
+        background-repeat: repeat;*/
+
 }
 
 body{
-    
-    background: #C7C7C7;  
-    background: -webkit-linear-gradient(-55deg, #F7F7F7, #C7C7C7);   
-    background: linear-gradient(-55deg, #C7C7C7, #F7F7F7);  
-    
 
-/*    background: transparent;
-    background: -webkit-linear-gradient(-90deg, rgba(255,255,255,1),  rgba(100,100,100,1)); 
-    background: linear-gradient(-90deg,  rgba(100,100,100,0.2), rgba(255,255,255,0.5));  */
-    
+    /*    background: #C7C7C7;  
+        background: -webkit-linear-gradient(-55deg, #F7F7F7, #C7C7C7);   
+        background: linear-gradient(-55deg, #C7C7C7, #F7F7F7);  */
+
+
+    background: #E0EBE8;  
+    background: -webkit-linear-gradient(55deg, #e0e3eb, #E0EBE8);   
+    background: linear-gradient(55deg, #E0EBE8, #e0e3eb); 
+
+    /*    background: transparent;
+        background: -webkit-linear-gradient(-90deg, rgba(255,255,255,1),  rgba(100,100,100,1)); 
+        background: linear-gradient(-90deg,  rgba(100,100,100,0.2), rgba(255,255,255,0.5));  */
+
 
 }
 
@@ -24,7 +28,7 @@ h1, h2, h3, h4, h5{
 
 .main{
     color: black;
-    
+
 }
 
 path.sign-preload-stroke{
@@ -38,10 +42,9 @@ path.sign-stroke{
 
 
 
-
 @keyframes strokeanimlight {
     0%   {fill:#0e1111;}
-    50%  {fill:#414a4c;}
+    50%  {fill:#21564b;}
     100% {fill:#0e1111;}
 }
 
@@ -55,12 +58,12 @@ path.sign-stroke-h{
 
 
 svg.img-sign:hover path.sign-stroke{
-    fill:#414a4c;
+    fill:#3E9C87;
 }
 
 
 h3.code-subtitle{
-    color:  #FFFFFF;
+    color:  #4AB19A ;
 }
 
 /*h3.code-subtitle {
@@ -71,14 +74,12 @@ h3.code-subtitle{
 .sub-dev:hover .fa-code:before{
     content: "developer";    
     color: #0e1111;
-    text-shadow: 1px 1px 5px #272634;
 }
 
 
 .sub-des:hover .fa-paint-brush:before{
     content: "designer";
     color: #0e1111 ;;
-    text-shadow: 1px 1px 5px #272634;
 }
 
 
@@ -86,7 +87,6 @@ h3.code-subtitle{
 .sub-nerd:hover .fa-ra:before{
     content: "n3rd";
     color: #0e1111;
-    text-shadow: 1px 1px 5px #272634;
 }
 
 
@@ -100,7 +100,19 @@ h3.code-subtitle{
     color: #000 !important;    
 }
 
-
+@media (max-width: 991px)
+{
+    .nav-link:hover {
+        box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2) !important;
+        color: #fff !important;
+        background-color: #4AB19A  !important;
+        border-color: #3E9C87  !important;
+    }
+    
+    .nav-link:hover i{
+        color: white !important;
+    }
+}
 
 
 /*Experiment Box3d*/
@@ -113,8 +125,8 @@ h3.code-subtitle{
 }
 
 .p3d a span:after {
-    background: #0e1111;
-    color: #DDD;
+    background: #3E9C87 ;
+    color: white;
 }
 /**End P3d*/
 
@@ -126,13 +138,23 @@ h3.code-subtitle{
     color: black !important;
 }
 
+
+.page-about .fa-code:hover, .fa-diamond:hover, .material-icons:hover{
+
+}
+.page-about .fa-code:hover, .fa-diamond:hover, .material-icons:hover, .page-skills .fa-briefcase:hover, .animatedcogs:hover .cogsm, .animatedcogs:hover .cogbg {
+    color: #3E9C87  !important;
+}
+
+
+
 .page-about .hvr-shiny:hover {
-    color: black !important;
+    color: #3E9C87 !important;
 }
 
 
 .WordClass:hover{
-    color: #0e1111 !important;
+    color: #4AB19A !important;
     transform: scale(1.3) !important;  
     background-color: transparent !important;
 }
@@ -143,7 +165,7 @@ form input, form textarea{
 }
 
 .form-group label{
- color: black !important;   
+    color: black !important;   
 }
 
 .form-control, .is-focused .form-control {
@@ -167,4 +189,8 @@ form input, form textarea{
 
 .line-menu{
     background-color: black;
+}
+
+#bodyClick{
+    right: 65px;
 }
